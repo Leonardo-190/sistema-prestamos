@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/laragon/www/sistema-prestamos -name \"*.php\" -type f ! -path \"*/vendor/*\" ! -path \"*/storage/*\" -exec php -l {})",
+      "Bash(2)"
+    ]
+  }
+}
