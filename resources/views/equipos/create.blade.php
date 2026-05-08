@@ -41,6 +41,10 @@
                 <input type="text" class="form-control bg-dark text-white border-secondary" id="modelo" name="modelo">
             </div>
             <div class="mb-3">
+                <label for="numero_serie" class="form-label">Número de Serie <span style="color: #dc3545;">*</span></label>
+                <input type="text" class="form-control bg-dark text-white border-secondary" id="numero_serie" name="numero_serie" required placeholder="Ej: ABC123XYZ">
+            </div>
+            <div class="mb-3">
                 <label for="estado" class="form-label">Estado</label>
                 <select class="form-select bg-dark text-white border-secondary" id="estado" name="estado" required>
                     <option value="Disponible">Disponible</option>

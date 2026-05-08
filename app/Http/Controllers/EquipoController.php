@@ -35,6 +35,7 @@ class EquipoController extends Controller
             'tipo' => 'required|string|max:255',
             'marca' => 'required|string|max:255',
             'modelo' => 'nullable|string|max:255',
+            'numero_serie' => 'required|string|max:255|unique:equipos',
             'estado' => 'required|string|in:Disponible,Prestado,Dañado',
         ]);
 
@@ -43,6 +44,7 @@ class EquipoController extends Controller
             'tipo' => $request->tipo,
             'marca' => $request->marca,
             'modelo' => $request->modelo,
+            'numero_serie' => $request->numero_serie,
             'estado' => $request->estado,
             'fecha_registro' => Carbon::now(), // Usar Carbon para la fecha actual
             'created_at' => Carbon::now(),
@@ -76,6 +78,7 @@ class EquipoController extends Controller
             'tipo' => 'required|string|max:255',
             'marca' => 'required|string|max:255',
             'modelo' => 'nullable|string|max:255',
+            'numero_serie' => 'required|string|max:255|unique:equipos,numero_serie,' . $id,
             'estado' => 'required|string|in:Disponible,Prestado,Dañado',
         ]);
 
@@ -84,6 +87,7 @@ class EquipoController extends Controller
             'tipo' => $request->tipo,
             'marca' => $request->marca,
             'modelo' => $request->modelo,
+            'numero_serie' => $request->numero_serie,
             'estado' => $request->estado,
             'updated_at' => Carbon::now(),
         ]);

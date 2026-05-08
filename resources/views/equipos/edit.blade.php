@@ -42,6 +42,10 @@
                 <input type="text" class="form-control bg-dark text-white border-secondary" id="modelo" name="modelo" value="{{ $equipo->modelo }}">
             </div>
             <div class="mb-3">
+                <label for="numero_serie" class="form-label">Número de Serie <span style="color: #dc3545;">*</span></label>
+                <input type="text" class="form-control bg-dark text-white border-secondary" id="numero_serie" name="numero_serie" value="{{ $equipo->numero_serie }}" required>
+            </div>
+            <div class="mb-3">
                 <label for="estado" class="form-label">Estado</label>
                 <select class="form-select bg-dark text-white border-secondary" id="estado" name="estado" required>
                     <option value="Disponible" {{ $equipo->estado == 'Disponible' ? 'selected' : '' }}>Disponible</option>
